@@ -1,25 +1,22 @@
-let currentCard = 0;
+let thehientai = 0;
 
 function XemThe() {
-    document.getElementById("question").textContent =
-        cards[currentCard].question;
-
-    document.getElementById("answer").textContent = "";
+    document.getElementById("cauhoi").textContent = card[thehientai].cauhoi;
+    document.getElementById("traloi").textContent = "";
 }
 
-function HienTraLoi() {
-    document.getElementById("answer").textContent =
-        cards[currentCard].answer;
+function HienDapAn() {
+    document.getElementById("traloi").textContent = card[thehientai].traloi;
 }
 
-function TheTiep() {
-    currentCard++;
+function TheTiepTheo() {
+    thehientai++;
 
-    if (currentCard >= cards.length) {
-        currentCard = 0;
+    if (thehientai >= card.length) {
+        thehientai = 0;
     }
 
-    showCard();
+    XemThe();
 }
 
 XemThe();
